@@ -93,15 +93,11 @@ classDiagram
 
 ✔️ Practiced notification handling
 
-## 📸 Screenshots 
-
-## 📱 Screenshots  
-
-
+## 📸 Screenshots
     
-  <img src="Screenshots/daily_reminder_app_output1.png" alt="Home Screen" width="250"/>
+  <img src="Screenshots/daily_reminder_app_output1.jpg" alt="Home Screen" width="250"/>
   
-  <img src="Screenshots/daily_reminder_app_output2.png" alt="Set Reminder Screen" width="250"/>
+  <img src="Screenshots/daily_reminder_app_output2.jpg" alt="Set Reminder Screen" width="250"/>
   
 
 
