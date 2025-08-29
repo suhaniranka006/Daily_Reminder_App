@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- For showing push notifications (Android 13+ me ye runtime bhi lena padta hai) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- CPU ko wakelock me rakhne ke liye (jaise background me alarm/notification trigger karna ho) -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Exact alarms schedule karne ke liye (jaise reminder apps, alarm clock apps) -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <!-- Exact alarm ke aur fine-grained access ke liye (rarely used, system-level permission jaisa) -->
+    <uses-permission
+        android:name="android.permission.USE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Daily_Reminder_App">
+
+        <receiver android:name=".ReminderReceiver" />
+        <!-- BroadcastReceiver jo reminder/alarm trigger hote hi call hoga -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
